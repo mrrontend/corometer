@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+  <title>Corometer</title>
+  <style>
+      a{
+          text-decoration: none;
+          color: white;
+      }
+
+      img{
+          border-radius: 50%;
+      }
+  </style>
+</head>
+<body>
+    <ons-page>
+        <ons-toolbar>
+          <div class="center">Corometer</div>
+        </ons-toolbar>
+      
+        <ons-tabbar swipeable position="auto">
+          <ons-tab page="tab1.html" label="Home" active>
+          </ons-tab>
+          <ons-tab page="tab2.html" label="Global " active-icon="md-face">
+          </ons-tab>
+          <ons-tab page="tab3.html" label=" Map" active-icon="md-face">
+        </ons-tab>
+        <ons-tab page="tab4.html" label="Graphs" active-icon="md-face">
+        </ons-tab>
+        <ons-tab page="tab5.html" label="About" active-icon="md-face">
+        </ons-tab>
+        </ons-tabbar>
+      </ons-page>
+      
+      <template id="tab1.html">
+        <ons-page id="Tab1">
+            <a class="fx-widget" data-widget="coronastatus" data-lang="en" data-base-url="https://www.fxempire.com" data-url="//www.fxempire.com" href="https://www.fxempire.com" rel="nofollow" > </a> <script async charset="utf-8" src="https://widgets.fxempire.com/widget.js" ></script>
+            <div class="card">
+                <div class="card-header">
+                  Featured
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Check out the official corona outbreak</h5>
+                  <ons-button modifier="material"><a href="https://www.who.int/docs/default-source/coronaviruse/who-rights-roles-respon-hw-covid-19.pdf?sfvrsn=bcabd401_0">CHECK OUT</a></ons-button>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Check out the protective measures against COVID-19 in hindi</h5>
+                    <ons-button modifier="material"><a href="https://www.mohfw.gov.in/pdf/ProtectivemeasuresHin.pdf">CHECK OUT</a></ons-button>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Check out all states corona helpline</h5>
+                    <ons-button modifier="material"><a href="https://www.mohfw.gov.in/pdf/coronvavirushelplinenumber.pdf">CHECK OUT</a></ons-button>
+                </div>
+            </div>
+            <ons-card>
+                <p>Made by <b>Suresh Mishra</b> for <b>Public Welfare</b></p>
+            </ons-card>
+        </ons-page>
+      </template>
+      
+      <template id="tab2.html">
+        <ons-page id="Tab2">
+            <div class="flourish-embed flourish-table" data-src="story/230195"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+        </ons-page>
+      </template>
+      
+       
+      <template id="tab3.html">
+        <ons-page id="Tab3">
+            <div class="flourish-embed flourish-map" data-src="story/225979"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+        </ons-page>
+      </template>
+
+       
+      <template id="tab4.html">
+        <ons-page id="Tab4">
+            <div class="flourish-embed flourish-chart" data-src="story/230110"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+        </ons-page>
+      </template>
+
+       
+      <template id="tab5.html">
+        <ons-page id="Tab5">
+           <ons-card>
+            <img src="https://scontent-lax3-1.cdninstagram.com/v/t51.2885-19/s150x150/102687545_2441518429472938_6062615385223986221_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_ohc=0ep0XLyQaGQAX92iPv0&oh=6c1010da0b84b3f71e9d30da532248af&oe=5F1ABFBD" alt="Onsen UI" style="width: 100%">
+            <br/>
+               <div class="content">
+                "Corometer is a covid tracking web app created by Suresh Mishra with love for public welfare.", "I had added many interactive features to it and the whole application is mobile-friendly and have a material design.", "I hope this web app help others to track covid."
+               </div>
+           </ons-card>
+           <ons-card>
+            <ons-button modifier="large--cta"><a href="https://misterfrontend.netlify.app/">View my portfolio</a><ons-button>
+           </ons-card>
+        </ons-page>
+      </template>
+
+      <script>
+          document.addEventListener('prechange', function(event) {
+  document.querySelector('ons-toolbar .center')
+    .innerHTML = event.tabItem.getAttribute('label');
+});
+
+document.querySelector('ons-button').setAttribute('someAttribute', 'true')
+
+      </script>
+</html>
